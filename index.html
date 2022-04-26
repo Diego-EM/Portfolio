@@ -14,10 +14,10 @@
     <div id="header_logo">DM</div>
         <nav>
             <ul id="header_nav">
-                <li class="nav_link"><a href="#about">About</a></li>
-                <li class="nav_link"><a href="#skill">Skills</a></li>
-                <li class="nav_link"><a href="#project">Projects</a></li>
-                <li class="nav_link"><a href="#contact">Contact</a></li>
+                <li class="nav_link"><a id="nav_about" href="#about">About</a></li>
+                <li class="nav_link"><a id="nav_skill" href="#skill">Skills</a></li>
+                <li class="nav_link"><a id="nav_project" href="#project">Projects</a></li>
+                <li class="nav_link"><a id="nav_link" href="#contact">Contact</a></li>
             </ul>
         </nav>
         <button id="page_lang">ES</button>
@@ -27,12 +27,97 @@
             <div id="welcome_photo">
             </div>
             <div id="welcome_content">
-                <h1>Hi! I'm Diego Muñoz</h1>
-                <h2 id="welcome_message" class="appear"></h2>
+                <h1 id="welcome_greet">Hi! I'm Diego Muñoz</h1>
+                <h2 id="welcome_message" class="appear">I'm a Jr. web developer</h2>
             </div>
         </section>
-        <section id="about"></section>
-        <section id="skill"></section>
+        <section id="about">
+            <div>
+                <h2 id="about_title">About me</h2>
+                <p id="about_p1">
+                    I'm a computer technician, and I'm currently studying at Universidad Veracruzana.
+                    I'm a self-taught person, passionate about frontend and backend web development.
+                </p>
+                <p id="about_p2">
+                    I'm starting my professional career developing projects where I can use what I learned,
+                    improve development techniques and bring a great user experience implementing the tools
+                    and technologies, whatever the case may be.
+                </p>
+                <p id="about_p3">
+                    My objective is being part of the sector to contribute to projects that benefit and bring
+                    good experiences to the final user, thus bringing a positive impact in a personal and professional way.
+                </p>
+            </div>
+            <figure></figure>
+        </section>
+        <section id="skill">
+            <h2 id="skill_title">Mis habilidades</h2>
+            <p id="skill_tech">
+                In my way, I had learned multiple technologies and tools that I've implemented in my projects
+                using the MVC architecture pattern and the following technologies.
+            </p>
+            <ul class="skill_list">
+                <li><img src="./assets/tech/html.svg" alt="html">
+                    <span class="skill_description">HTML</span>
+                </li>
+                <li><img src="./assets/tech/css.svg" alt="css">
+                    <span class="skill_description">CSS</span>
+                </li>
+                <li><img src="./assets/tech/sass.svg" alt="sass">
+                    <span class="skill_description">SASS</span>
+                </li>
+                <li><img src="./assets/tech/js.svg" alt="js">
+                    <span class="skill_description">Javascript</span>
+                </li>
+                <li><img src="./assets/tech/ts.svg" alt="ts">
+                    <span class="skill_description">Typescript</span>
+                </li>
+                <li><img src="./assets/tech/node.svg" alt="node">
+                    <span class="skill_description">Node.js</span>
+                </li>
+                <li><img src="./assets/tech/mongo.svg" alt="mongo">
+                    <span class="skill_description">MongoDB</span>
+                </li>
+                <li><img src="./assets/tech/angular.svg" alt="angular">
+                    <span class="skill_description">Angular</span>
+                </li>
+                <li><img src="./assets/tech/php.svg" alt="php">
+                    <span class="skill_description">PHP</span>
+                </li>
+                <li><img src="./assets/tech/mysql.svg" alt="mysql">
+                    <span class="skill_description">MySQL</span>
+                </li>
+                <li><img src="./assets/tech/git.svg" alt="git">
+                    <span class="skill_description">Git</span>
+                </li>
+            </ul>
+            <p id="skill_personal">
+                Also, I've been developing my personal life for bringing a positive impact in a social and professional way.
+            </p>
+            <ul class="skill_list">
+                <li><img src="./assets/personal/adaptability.svg" alt="adaptable">
+                    <span id="list_adap">Adaptable</span>
+                </li>
+                <li><img src="./assets/personal/assertive.svg" alt="assertive">
+                    <span id="list_asse">Assertive</span>
+                </li>
+                <li><img src="./assets/personal/creative.svg" alt="creative">
+                    <span id="list_crea">Creative</span>
+                </li>
+                <li><img src="./assets/personal/discipline.svg" alt="discipline">
+                    <span id="list_disc">Disciplined</span>
+                </li>
+                <li><img src="./assets/personal/organized.svg" alt="organized">
+                    <span id="list_org">Organized</span>
+                </li>
+                <li><img src="./assets/personal/productive.svg" alt="productive">
+                    <span id="list_prod">Productive</span>
+                </li>
+                <li><img src="./assets/personal/selftaught.svg" alt="selftaught">
+                    <span id="list_se">Self educated</span>
+                </li>
+            </ul>
+        </section>
         <section id="project"></section>
         <section id="contact"></section>
     </main>

@@ -1,4 +1,5 @@
 $black: #1d1d1d
+$gray: #3b3b3b
 $white: #f7f7f7
 $blue: #34b0e1
 $green: #45ac54
@@ -28,7 +29,11 @@ main
     margin-top: 35px
 
 section
-    min-height: 80vh
+    &:not(#welcome)
+        padding: 25px 100px
+
+        @media only screen and ( max-width: 530px )
+            padding: 25px
 
 #header
     position: fixed
@@ -71,7 +76,7 @@ section
         font-size: 1em
         background-color: transparent
         cursor: pointer
-        border: 1px solid #1d1d1d
+        border: 1px solid $black
         border-radius: 20px
         transition: filter 250ms
 
@@ -84,6 +89,7 @@ section
     flex-wrap: wrap
     justify-content: space-around
     align-items: center
+    min-height: 90vh
 
     #welcome_photo
         height: 450px
@@ -121,6 +127,67 @@ section
     
     #welcome_message
         transition: color 500ms
+
+#about
+    display: flex
+    justify-content: space-around
+    align-items: center
+
+    h2
+        margin: 10px 15px
+        font-size: 2em
+        text-align: center
+
+    p
+        margin: 15px 40px
+        font-size: 1.1em
+        text-align: justify
+
+    figure
+        height: 500px
+        max-width: 450px
+        min-width: 420px
+        background-color: $gray 
+
+    @media only screen and (max-width: 940px)
+        figure
+            display: none
+
+#skill
+    h2
+        margin: 10px 15px
+        font-size: 2em
+        text-align: center
+
+    p
+        margin: 15px 40px
+        font-size: 1.1em
+        text-align: center
+
+    .skill_list
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        align-items: baseline
+        margin: 30px 20px
+
+        li
+            display: flex
+            flex-direction: column
+            align-items: center
+            margin: 16px
+
+            img
+                width: 65px
+                margin-bottom: 5px
+
+            // .skill_description
+            //     opacity: 0
+            //     transition: 150ms
+
+            // &:hover
+            //     .skill_description
+            //         opacity: 1
 
 //Dinamic class
 .scrolled
