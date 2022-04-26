@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #1d1d1d;
+  font-family: "Lato", sans-serif;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(to right bottom, #ffffff, #fcfcfc, #f9f9f9, #f7f7f7, #f4f4f4);
+}
+
+main {
+  margin-top: 35px;
+}
+
+section {
+  min-height: 80vh;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 35px;
+  width: 100%;
+  transition: background 250ms;
+  z-index: 1000;
+}
+#header #header_nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+#header #header_nav .nav_link {
+  margin: 0 10px;
+  font-size: 1.1em;
+}
+#header #header_nav .nav_link a {
+  transition: color 100ms;
+}
+#header #header_nav .nav_link:first-child:hover a {
+  color: #34b0e1;
+}
+#header #header_nav .nav_link:nth-child(2):hover a {
+  color: #45ac54;
+}
+#header #header_nav .nav_link:nth-child(3):hover a {
+  color: #ce1a35;
+}
+#header #header_nav .nav_link:nth-child(4):hover a {
+  color: #6b1ace;
+}
+#header #page_lang {
+  margin: 0 15px;
+  padding: 1px 10px;
+  width: 45px;
+  color: #1d1d1d;
+  font-size: 1em;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid #1d1d1d;
+  border-radius: 20px;
+  transition: filter 250ms;
+}
+#header #page_lang:hover {
+  filter: invert(0.2);
+}
+
+#welcome {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+#welcome #welcome_photo {
+  height: 450px;
+  width: 450px;
+  margin: 20px;
+  border-radius: 50%;
+  outline: 1px solid #1d1d1d;
+}
+#welcome #welcome_content {
+  margin: 20px 0;
+  width: 50%;
+  min-width: 250px;
+}
+#welcome h1 {
+  font-size: 3.5em;
+}
+#welcome h2 {
+  font-size: 2.8em;
+}
+@media only screen and (max-width: 979px) {
+  #welcome #welcome_content {
+    position: absolute;
+    top: 65%;
+    width: 70%;
+  }
+  #welcome h1, #welcome h2 {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 745px) {
+  #welcome #welcome_content {
+    position: relative;
+  }
+  #welcome #welcome_photo {
+    display: none;
+  }
+}
+#welcome #welcome_message {
+  transition: color 500ms;
+}
+
+.scrolled {
+  background-color: #1d1d1d;
+}
+.scrolled #page_lang {
+  border-color: #f7f7f7 !important;
+  color: white !important;
+}
+.scrolled #header_logo, .scrolled a {
+  color: #f7f7f7;
+  filter: brightness(2);
+}
+
+.appear {
+  animation: appear 150ms ease-out backwards;
+}
+
+.vanish {
+  animation: vanish 150ms ease-in backwards;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes vanish {
+  100% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
