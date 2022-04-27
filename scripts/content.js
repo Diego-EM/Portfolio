@@ -10,9 +10,11 @@ const PageContent = {
         a1: "I'm a computer technician, and I'm currently studying at Universidad Veracruzana. I'm a self-taught person, passionate about frontend and backend web development.",
         a2: "I'm starting my professional career developing projects where I can use what I learned, improve development techniques and bring a great user experience implementing the tools and technologies, whatever the case may be.",
         a3: "My objective is being part of the sector to contribute to projects that benefit and bring good experiences to the final user, thus bringing a positive impact in a personal and professional way.",
+        a4: "I own certifies that avails my tech skills due to my education trough online courses provided by FreeCodeCamp. Feel free to verify their source.",
+        a5: "View certifications",
         st: "Skills",
-        s1: "In my way, I had learned multiple technologies and tools that I've implemented in my projects using the MVC architecture pattern and the following technologies.",
-        s2: "Also, I've been developing my personal life for bringing a positive impact in a social and professional way.",
+        s1: "In my way, I learned multiple technologies and tools that I've implemented in my projects using the MVC architecture pattern and the following technologies.",
+        s2: "Also, I've been developing my personal life to bring a positive impact socially and professionally.",
         sl1: "Adaptable",
         sl2: "Assertive",
         sl3: "Creative",
@@ -32,6 +34,8 @@ const PageContent = {
         a1: "Soy técnico bachiller en computación y actualmente me encuentro estudiando en la Universidad Veracruzana. Soy una persona autodidacta, apasionado por el desarrollo web, tanto del lado cliente como del servidor.",
         a2: "Estoy trazando mi camino profesional a partir de proyectos en los cuales me permitan hacer uso de todo lo que he aprendido con el tiempo, perfeccionar técnicas de desarrollo y brindar una experiencia de usuario agradable implementando las herramientas y tecnologías según sus necesidades.",
         a3: "Mi objetivo es formar parte del sector de la informática para contribuir a proyectos que beneficien y den una buena experiencia al usuario final, y de tal forma dar un impacto positivo a nivel personal y profesional con las tecnologías del momento.",
+        a4: "Cuento con certificados que avalan mis habilidades técnicas gracias al estudio a través de cursos online proveídos por FreeCodeCamp. Siéntete libre de verificar las fuentes.",
+        a5: "Ver certificados",
         st: "Mis habilidades",
         s1: "En el camino he aprendido el uso de múltiples herramientas y las he implementado en mis proyectos utilizando el patrón MVC y las siguientes tecnologías.",
         s2: "De igual manera me he desarrollado en mi vida personal procurando dar un impacto positivo a nivel social y laboral.",
@@ -85,6 +89,8 @@ const aboutTitle = document.getElementById('about_title');
 const aboutP1 = document.getElementById('about_p1');
 const aboutP2 = document.getElementById('about_p2');
 const aboutP3 = document.getElementById('about_p3');
+const aboutP4 = document.getElementById('about_p4');
+const aboutCert = document.getElementById('about_certification');
 
 const skillTitle = document.getElementById('skill_title');
 const skillTech = document.getElementById('skill_tech');
@@ -111,6 +117,8 @@ const setContent = () => {
     aboutP1.textContent = PageContent[lang].a1;
     aboutP2.textContent = PageContent[lang].a2;
     aboutP3.textContent = PageContent[lang].a3;
+    aboutP4.textContent = PageContent[lang].a4;
+    aboutCert.textContent = PageContent[lang].a5;
 
     skillTitle.textContent = PageContent[lang].st;
     skillTech.textContent = PageContent[lang].s1
