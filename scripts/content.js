@@ -21,7 +21,14 @@ const PageContent = {
         sl4: "Disciplined",
         sl5: "Organized",
         sl6: "Productive",
-        sl7: "Self educated"
+        sl7: "Self educated",
+        pt: "My projects",
+        p1: "A web application that allows the user to personalize avatars to their preferences. It's a feature that could be implemented in forums and social websites to bring an identity to the user account.",
+        p2: "Furniture and home accessories oriented e-commerce, developed with Angular 12 and Sass in the frontend, PHP in the backend, and MySQL as database.",
+        p3: "A web application whose purpose is to bring a good experience in the learning process likewise reinforces the user's knowledge.",
+        p4: "A web application that uses IndexedDB API and implements functionalities such as 'Drag and Drop' provided by Angular modules for the notes handling and editing where the user can write tasks, reminders, etc.",
+        pm: "If you want to see more of my work, you can visit my ",
+        pml: "GitHub profile here."
     },
     ES: {
         n1: "Sobre mi",
@@ -45,7 +52,14 @@ const PageContent = {
         sl4: "Disciplinado",
         sl5: "Organizado",
         sl6: "Productivo",
-        sl7: "Autodidacta"
+        sl7: "Autodidacta",
+        pt: "Proyectos",
+        p1: "Aplicación web que permite la personalización de avatares según el gusto del usuario, función que puede ser implementada en sitios web de discusiones o chat para darle una identidad más personal a la cuenta del usuario.",
+        p2: "E-commerce orientado a muebles y accesorios artesanales, desarrollado en Angular y Sass del lado cliente, se utilizó PHP de lado del servidor y MySQL como base de datos.",
+        p3: "Aplicación web cuyo propósito es brindar una experiencia agradable durante el proceso de aprendizaje, de igual manera se busca reforzar el conocimiento del usuario.",
+        p4: "Aplicación web que hace uso de IndexedDB e implementa la funcionalidad 'Drag and Drop' de los módulos de Angular para el manejo y editado de notas donde el usuario puede escribir tareas del día, recordatorios, etc.",
+        pm: "Si deseas ver más de los proyectos en los que he trabajado puedes visitar ",
+        pml: "mi perfil de GitHub"
     }
 }
 
@@ -103,6 +117,14 @@ const skillListDisc = document.getElementById('list_disc');
 const skillListOrg = document.getElementById('list_org');
 const skillListProd = document.getElementById('list_prod');
 
+const projectsTitle = document.getElementById('projects_title');
+const project1 = document.getElementById('project_1');
+const project2 = document.getElementById('project_2');
+const project3 = document.getElementById('project_3');
+const project4 = document.getElementById('project_4');
+const projectMesage = document.getElementById('project_message');
+const projectMessageLink = document.getElementById('project_message_link');
+
 //Setting content by lang user preference
 const setContent = () => {
     navAbout.textContent = PageContent[lang].n1;
@@ -130,6 +152,13 @@ const setContent = () => {
     skillListOrg.textContent = PageContent[lang].sl5;
     skillListProd.textContent = PageContent[lang].sl6;
     skillListSe.textContent = PageContent[lang].sl7;
+
+    projectsTitle.textContent = PageContent[lang].pt;
+    project1.textContent = PageContent[lang].p1;
+    project2.textContent = PageContent[lang].p2;
+    project3.textContent = PageContent[lang].p3;
+    project4.textContent = PageContent[lang].p4;
+    projectMesage.innerHTML = `${PageContent[lang].pm} <a id="project_message_link" href="https://github.com/Diego-EM" target="_blank">${PageContent[lang].pml}</a>`;
 }
 
 //Dinamic welcome message in welcome section
