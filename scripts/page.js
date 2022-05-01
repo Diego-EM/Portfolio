@@ -8,3 +8,29 @@ addEventListener('scroll',()=>{
 },
 { passive: true }
 )
+
+//Scrollreveal
+const scroll = ScrollReveal();
+
+scroll.reveal('.sr_elem', {
+    viewOffset: {
+        top: 60,
+        bottom: 60,
+    },
+    delay: 200,
+    distance: "10px",
+    duration: 350,
+    reset: true
+});
+
+scroll.reveal('.sr_project', {
+    viewOffset: {
+        top: 60,
+        bottom: 60,
+    },
+    viewFactor: 0.3,
+    delay: 150,
+    distance: "20px",
+    duration: 200,
+    reset: true
+});

@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.js"></script>
 </head>
 <body>
     <header id="header">
@@ -31,7 +32,7 @@
                 <h2 id="welcome_message" class="appear">I'm a Jr. web developer</h2>
             </div>
         </section>
-        <section id="about">
+        <section id="about" class="sr_elem">
             <div>
                 <h2 id="about_title">About me</h2>
                 <p id="about_p1">
@@ -58,12 +59,12 @@
             <figure></figure>
         </section>
         <section id="skill">
-            <h2 id="skill_title">Skills</h2>
-            <p id="skill_tech">
+            <h2 id="skill_title" class="sr_elem">Skills</h2>
+            <p id="skill_tech" class="sr_elem">
                 In my way, I learned multiple technologies and tools that I've implemented in my projects using the
                 MVC architecture pattern and the following technologies.
             </p>
-            <ul class="skill_list">
+            <ul class="skill_list sr_elem">
                 <li><img src="./assets/tech/html.svg" alt="html">
                     <span class="skill_description">HTML</span>
                 </li>
@@ -98,10 +99,10 @@
                     <span class="skill_description">Git</span>
                 </li>
             </ul>
-            <p id="skill_personal">
+            <p id="skill_personal" class="sr_elem">
                 Also, I've been developing my personal life to bring a positive impact socially and professionally.
             </p>
-            <ul class="skill_list">
+            <ul class="skill_list sr_elem">
                 <li><img src="./assets/personal/adaptability.svg" alt="adaptable">
                     <span id="list_adap">Adaptable</span>
                 </li>
@@ -126,9 +127,9 @@
             </ul>
         </section>
         <section id="project">
-            <h2 id="projects_title">My projects</h2>
+            <h2 id="projects_title" class="sr_elem">My projects</h2>
             <div id="project_content">
-                <div class="project_card">
+                <div class="project_card sr_project">
                     <figure class="project_preview">
                         <img src="./assets/projects/avatar_maker.png" alt="Avatar maker">
                     </figure>
@@ -149,7 +150,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="project_card">
+                <div class="project_card sr_project">
                     <figure class="project_preview">
                         <img src="./assets/projects/ecommerce.png" alt="Avatar maker">
                     </figure>
@@ -170,7 +171,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="project_card">
+                <div class="project_card sr_project">
                     <figure class="project_preview">
                         <img src="./assets/projects/quizzme.png" alt="Avatar maker">
                     </figure>
@@ -192,7 +193,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="project_card">
+                <div class="project_card sr_project">
                     <figure class="project_preview">
                         <img src="./assets/projects/notes.png" alt="Notes">
                     </figure>
@@ -213,7 +214,9 @@
                     </div>
                 </div>
             </div>
-            <p id="project_message">If you want to see more of my work, you can visit my <a id="project_message_link" href="https://github.com/Diego-EM" target="_blank">GitHub profile here.</a></p>
+            <p id="project_message" class="sr_elem">
+                If you want to see more of my work, you can visit my <a id="project_message_link" href="https://github.com/Diego-EM" target="_blank">GitHub profile here.</a>
+            </p>
         </section>
         <section id="contact"></section>
     </main>
