@@ -218,9 +218,22 @@
                 If you want to see more of my work, you can visit my <a id="project_message_link" href="https://github.com/Diego-EM" target="_blank">GitHub profile here.</a>
             </p>
         </section>
-        <section id="contact"></section>
+        <section id="contact">
+            <h2>Contact me</h2>
+            <p id="contact_message">We can build <span>awesome</span> things together!</p>
+            <form id="contact_form" novalidate>
+                <input type="text" placeholder="Full name" name="name">
+                <p id="invalid_name" class="invalid_value">This is an error message</p>
+                <input type="email" placeholder="Email address" name="email">
+                <p id="invalid_email" class="invalid_value">This is an error message</p>
+                <textarea name="body" placeholder="Let me know your idea..."></textarea>
+                <p id="invalid_body" class="invalid_value">This is an error message</p>
+                <input type="submit" value="Send message">
+            </form>
+        </section>
     </main>
     <footer></footer>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="./scripts/page.js"></script>
     <script src="./scripts/content.js"></script>
 </body>

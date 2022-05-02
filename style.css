@@ -324,6 +324,66 @@ section:not(#welcome) {
   filter: invert(20%) sepia(60%) saturate(2000%) hue-rotate(327deg) brightness(150%) contrast(150%);
 }
 
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#contact h2 {
+  margin: 10px 15px;
+  font-size: 2em;
+  text-align: center;
+}
+
+#contact_message {
+  margin: 15px 40px;
+  font-size: 1.3em;
+  text-align: center;
+}
+#contact_message span {
+  color: #6b1ace;
+}
+
+#contact_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 550px;
+  min-width: 320px;
+  margin: 15px 0;
+  padding: 0 15px;
+}
+#contact_form input, #contact_form textarea {
+  padding: 10px;
+  width: 100%;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 1px solid #3b3b3b;
+  background: none;
+  font-size: 1.1em;
+  transition: all 150ms;
+}
+#contact_form input:focus, #contact_form textarea:focus {
+  border-bottom-color: #6b1ace;
+  background-color: rgba(107, 26, 206, 0.0509803922);
+  outline: none;
+}
+#contact_form textarea {
+  height: 130px;
+  resize: none;
+}
+#contact_form input[type=submit] {
+  border: 1px solid #3b3b3b;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#contact_form input[type=submit]:hover {
+  border-color: #6b1ace;
+  background-color: #6b1ace;
+  color: #f7f7f7;
+}
+
 .scrolled {
   background-color: #1d1d1d;
 }
@@ -334,6 +394,23 @@ section:not(#welcome) {
 .scrolled #header_logo, .scrolled a {
   color: #f7f7f7;
   filter: brightness(2);
+}
+
+.invalid_field {
+  background-color: rgba(206, 26, 53, 0.2) !important;
+  border-bottom-color: #ce1a35 !important;
+}
+
+.invalid_value {
+  align-self: flex-start;
+  color: #ce1a35;
+  font-size: 1em;
+  display: none;
+}
+
+.visible {
+  animation: appear 150ms backwards;
+  display: initial;
 }
 
 .appear {

@@ -6,6 +6,8 @@ $blue: #2c98c3
 $green: #45ac54
 $red: #ce1a35
 $purple: #6b1ace
+$onerror_red: #ce1a3533
+$onfocus_purple: #6b1ace0d
 
 //Initialization    
 *
@@ -321,6 +323,64 @@ section
                 &:hover > img
                     filter: invert(20%) sepia(60%) saturate(2000%) hue-rotate(327deg) brightness(150%) contrast(150%)
 
+#contact
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    h2
+        margin: 10px 15px
+        font-size: 2em
+        text-align: center
+
+#contact_message
+    margin: 15px 40px
+    font-size: 1.3em
+    text-align: center
+
+    span
+        color: $purple
+
+#contact_form
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 90%
+    max-width: 550px
+    min-width: 320px
+    margin: 15px 0
+    padding: 0 15px
+
+    input, textarea
+        padding: 10px
+        width: 100%
+        margin: 10px 0
+        border: none
+        border-bottom: 1px solid #3b3b3b
+        background: none
+        font-size: 1.1em
+        transition: all 150ms
+
+        &:focus
+            border-bottom-color: $purple 
+            background-color: $onfocus_purple
+            outline: none
+
+    textarea
+        height: 130px
+        resize: none
+
+    input[type=submit]
+        border: 1px solid $gray
+        border-radius: 5px
+        cursor: pointer
+
+        &:hover
+            border-color: $purple
+            background-color: $purple
+            color: $white
+        
+
 //Dinamic class
 .scrolled
     background-color: $black
@@ -333,6 +393,20 @@ section
         color: $white
         filter: brightness(2)
 
+.invalid_field
+    background-color: $onerror_red !important
+    border-bottom-color: $red !important
+
+.invalid_value
+    align-self: flex-start
+    color: $red
+    font-size: 1em
+    display: none
+
+.visible
+    animation: appear 150ms backwards
+    display: initial
+    
 .appear
     animation: appear 150ms ease-out backwards
 
@@ -351,5 +425,5 @@ section
 @keyframes vanish
     100%
         transform: translateY(10px)
-        opacity: 0
+        opacity: 0        
                         
