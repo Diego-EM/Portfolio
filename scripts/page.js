@@ -48,6 +48,7 @@ contactForm.addEventListener('submit', function(e){
         .then(() => validateField(formContent.email, validEmail, 'email', 'You must type a valid email address'))
         .then(() => validateField(formContent.body, validField, 'body', 'You can write your idea here :)'))
         .then(() => {
+            switchLoader();
             const email = {
                 Host : "host",
                 Username : "username",
@@ -59,6 +60,7 @@ contactForm.addEventListener('submit', function(e){
             }
             Email.send(email)
                 .then( message =>{
+                    switchLoader();
                     console.log(message);
                 })
         })
@@ -86,4 +88,11 @@ const validateField = (value, regex, fieldName = "", errorMsg = "") => {
         }
         rej({ field: fieldName, error: errorMsg });
     })
+}
+
+const switchLoader = () => {
+    const button = document.getElementById('submit_form');
+    const loader = document.getElementById('loader_container');
+    button.classList.toggle('visible');
+    loader.classList.toggle('visible');
 }

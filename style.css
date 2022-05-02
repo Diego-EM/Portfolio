@@ -374,6 +374,9 @@ section:not(#welcome) {
   resize: none;
 }
 #contact_form input[type=submit] {
+  display: none;
+  justify-content: center;
+  align-items: center;
   border: 1px solid #3b3b3b;
   border-radius: 5px;
   cursor: pointer;
@@ -382,6 +385,24 @@ section:not(#welcome) {
   border-color: #6b1ace;
   background-color: #6b1ace;
   color: #f7f7f7;
+}
+
+#loader_container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  border-color: #6b1ace;
+  background-color: #6b1ace;
+  color: #f7f7f7;
+  transition: all 150ms;
+}
+#loader_container img {
+  animation: rotate 2.4s linear infinite;
 }
 
 .scrolled {
@@ -410,7 +431,7 @@ section:not(#welcome) {
 
 .visible {
   animation: appear 150ms backwards;
-  display: initial;
+  display: flex !important;
 }
 
 .appear {
@@ -435,6 +456,11 @@ section:not(#welcome) {
   100% {
     transform: translateY(10px);
     opacity: 0;
+  }
+}
+@keyframes rotate {
+  100% {
+    transform: rotateZ(360deg);
   }
 }
 
