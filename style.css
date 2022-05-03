@@ -370,7 +370,7 @@ section:not(#welcome) {
   outline: none;
 }
 #contact_form textarea {
-  height: 130px;
+  height: 180px;
   resize: none;
 }
 #contact_form input[type=submit] {
@@ -405,6 +405,66 @@ section:not(#welcome) {
   animation: rotate 2.4s linear infinite;
 }
 
+#send_status {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(59, 59, 59, 0.1176470588);
+  z-index: 100000;
+}
+
+#modal_status {
+  position: relative;
+  width: 50vw;
+  min-width: 250px;
+  max-width: 680px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  animation: display_modal 200ms backwards;
+}
+#modal_status div {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 30px;
+  text-align: center;
+  animation: display_message 200ms 300ms backwards;
+}
+#modal_status div img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+#modal_status div h3 {
+  margin: 5px 10px;
+  font-size: 2em;
+}
+#modal_status div p {
+  font-size: 1.3em;
+}
+
+#close_modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+#close_modal:hover {
+  opacity: 0.8;
+}
+#close_modal img {
+  width: 25px;
+}
+
 .scrolled {
   background-color: #1d1d1d;
 }
@@ -431,6 +491,10 @@ section:not(#welcome) {
 
 .visible {
   animation: appear 150ms backwards;
+  display: flex !important;
+}
+
+.display {
   display: flex !important;
 }
 
@@ -461,6 +525,22 @@ section:not(#welcome) {
 @keyframes rotate {
   100% {
     transform: rotateZ(360deg);
+  }
+}
+@keyframes display_modal {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes display_message {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

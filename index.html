@@ -235,9 +235,25 @@
             </form>
         </section>
     </main>
+    <div id="send_status">
+        <div id="modal_status">
+            <div id="success">
+                <img src="./assets/misc/success.svg" alt="email send successful">
+                <h3>Email sended succesfully</h3>
+                <p>You will get a response soon :)</p>
+            </div>
+            <div id="failed">
+                <img src="./assets/misc/error.svg" alt="email send error">
+                <h3>Ooops...</h3>
+                <p>You must set the email params with your own data in "page.js" file</p>
+            </div>
+            <button id="close_modal"><img src="./assets/misc/exit.svg" alt="close"></button>
+        </div>
+    </div>
     <footer></footer>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="./scripts/page.js"></script>
     <script src="./scripts/content.js"></script>
+    <script src="./scripts/email.js"></script>
 </body>
 </html>
