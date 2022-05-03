@@ -223,29 +223,40 @@
             <p id="contact_message">We can build <span>awesome</span> things together!</p>
             <form id="contact_form" novalidate>
                 <input type="text" placeholder="Full name" name="name">
-                <p id="invalid_name" class="invalid_value">This is an error message</p>
+                <p id="invalid_name" class="invalid_value"></p>
                 <input type="email" placeholder="Email address" name="email">
-                <p id="invalid_email" class="invalid_value">This is an error message</p>
+                <p id="invalid_email" class="invalid_value"></p>
                 <textarea name="body" placeholder="Let me know your idea..."></textarea>
-                <p id="invalid_body" class="invalid_value">This is an error message</p>
+                <p id="invalid_body" class="invalid_value"></p>
                 <input type="submit" value="Send message" class="visible" id="submit_form">
                 <div id="loader_container">
                     <img src="./assets/misc/loading.svg" alt=":)">
                 </div>
             </form>
+            <h3>Or connect with me on...</h3>
+            <div id="contact_external">
+                <a href="https://api.whatsapp.com/send?phone=529212713690" target="_blank" class="external_link">
+                    <img src="./assets/misc/whatsapp.svg" alt="Whatsapp">
+                    Whatsapp
+                </a>
+                <a href="https://m.me/diego.munoz.790693" target="_blank" class="external_link">
+                    <img src="./assets/misc/messenger.svg" alt="Messenger">
+                    Messenger
+                </a>
+            </div>
         </section>
     </main>
     <div id="send_status">
         <div id="modal_status">
             <div id="success">
                 <img src="./assets/misc/success.svg" alt="email send successful">
-                <h3>Email sended succesfully</h3>
-                <p>You will get a response soon :)</p>
+                <h3>Email sent successfully</h3>
+                <p>You will get a response soon! 💻</p>
             </div>
             <div id="failed">
                 <img src="./assets/misc/error.svg" alt="email send error">
                 <h3>Ooops...</h3>
-                <p>You must set the email params with your own data in "page.js" file</p>
+                <p>Sorry, an error has occurred. You can try again.</p>
             </div>
             <button id="close_modal"><img src="./assets/misc/exit.svg" alt="close"></button>
         </div>
