@@ -28,7 +28,20 @@ const PageContent = {
         p3: "A web application whose purpose is to bring a good experience in the learning process likewise reinforces the user's knowledge.",
         p4: "A web application that uses IndexedDB API and implements functionalities such as 'Drag and Drop' provided by Angular modules for the notes handling and editing where the user can write tasks, reminders, etc.",
         pm: "If you want to see more of my work, you can visit my ",
-        pml: "GitHub profile here."
+        pml: "GitHub profile here.",
+        ct: "Contact me",
+        cm: "We can build <span>awesome</span> things together!",
+        cerror1: "You should type your name to meet you.",
+        cerror2: "You must type a valid email address.",
+        cerror3: "You can write your idea here.",
+        cname: "Full name",
+        cemail: "Email address",
+        cbody: "Let me know your idea...",
+        csubmit: "Send message",
+        cm2: "Or connect with me on...",
+        modalst: "Email sent successfully",
+        modalsm: "You will get a response soon! 💻",
+        modalem: "Sorry, an error has occurred. Please try again."
     },
     ES: {
         n1: "Sobre mi",
@@ -59,7 +72,20 @@ const PageContent = {
         p3: "Aplicación web cuyo propósito es brindar una experiencia agradable durante el proceso de aprendizaje, de igual manera se busca reforzar el conocimiento del usuario.",
         p4: "Aplicación web que hace uso de IndexedDB e implementa la funcionalidad 'Drag and Drop' de los módulos de Angular para el manejo y editado de notas donde el usuario puede escribir tareas del día, recordatorios, etc.",
         pm: "Si deseas ver más de los proyectos en los que he trabajado puedes visitar ",
-        pml: "mi perfil de GitHub"
+        pml: "mi perfil de GitHub",
+        ct: "Contáctame",
+        cm: "Trabajemos en proyectos <span>asombrosos</span> juntos.",
+        cerror1: "Ingresa tu nombre para conocerte.",
+        cerror2: "Ingresa un correo electrónico válido.",
+        cerror3: "Ingresa tu idea aquí.",
+        cname: "Nombre completo",
+        cemail: "Correo electrónico",
+        cbody: "Escribe tu idea...",
+        csubmit: "Enviar",
+        cm2: "O chatea conmigo en...",
+        modalst: "Mensaje enviado con éxito",
+        modalsm: "Muy pronto obtendras mi respuesta! 💻",
+        modalem: "Lo sentimos, un error ha ocurrido. Por favor, vuelva a intentarlo."
     }
 }
 
@@ -125,6 +151,17 @@ const project4 = document.getElementById('project_4');
 const projectMesage = document.getElementById('project_message');
 const projectMessageLink = document.getElementById('project_message_link');
 
+const contactTitle = document.getElementById('contact_title');
+const contactMessage = document.getElementById('contact_message');
+const contactInputN = document.getElementById('contact_inputn');
+const contactInputE = document.getElementById('contact_inpute');
+const contactInputB = document.getElementById('contact_inputb');
+const contactSubmit = document.getElementById('submit_form');
+const contactMessage2 = document.getElementById('contact_message2');
+const modalSuccessTitle = document.getElementById('modal_success_title');
+const modalSuccessMessage = document.getElementById('modal_success_message');
+const modalErrorMessage = document.getElementById('modal_error_message');
+
 //Setting content by lang user preference
 const setContent = () => {
     navAbout.textContent = PageContent[lang].n1;
@@ -159,6 +196,17 @@ const setContent = () => {
     project3.textContent = PageContent[lang].p3;
     project4.textContent = PageContent[lang].p4;
     projectMesage.innerHTML = `${PageContent[lang].pm} <a id="project_message_link" href="https://github.com/Diego-EM" target="_blank">${PageContent[lang].pml}</a>`;
+
+    contactTitle.textContent = PageContent[lang].ct;
+    contactMessage.innerHTML = PageContent[lang].cm
+    contactInputN.placeholder = PageContent[lang].cname;
+    contactInputE.placeholder = PageContent[lang].cemail;
+    contactInputB.placeholder = PageContent[lang].cbody;
+    contactSubmit.value = PageContent[lang].csubmit;
+    contactMessage2.textContent = PageContent[lang].cm2;
+    modalSuccessTitle.textContent = PageContent[lang].modalst;
+    modalSuccessMessage.textContent = PageContent[lang].modalsm;
+    modalErrorMessage.textContent = PageContent[lang].modalem;
 }
 
 //Dinamic welcome message in welcome section
