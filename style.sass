@@ -6,6 +6,9 @@ $blue: #2c98c3
 $green: #45ac54
 $red: #ce1a35
 $purple: #6b1ace
+$onerror_red: #ce1a3533
+$onfocus_purple: #6b1ace0d
+$onblur_gray: #3b3b3b1e
 
 //Initialization    
 *
@@ -321,6 +324,172 @@ section
                 &:hover > img
                     filter: invert(20%) sepia(60%) saturate(2000%) hue-rotate(327deg) brightness(150%) contrast(150%)
 
+#contact
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    h2
+        margin: 10px 15px
+        font-size: 2em
+        text-align: center
+
+#contact_message
+    margin: 15px 40px
+    font-size: 1.3em
+    text-align: center
+
+    span
+        color: $purple
+
+#contact_form
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 90%
+    max-width: 550px
+    min-width: 320px
+    margin: 15px 0
+    padding: 0 15px
+
+    input, textarea
+        padding: 10px
+        width: 100%
+        margin: 10px 0
+        border: none
+        border-bottom: 1px solid #3b3b3b
+        background: none
+        font-size: 1.1em
+        transition: all 150ms
+
+        &:focus
+            border-bottom-color: $purple 
+            background-color: $onfocus_purple
+            outline: none
+
+    textarea
+        height: 180px
+        resize: none
+
+    input[type=submit]
+        display: none
+        justify-content: center
+        align-items: center
+        border: 1px solid $gray
+        border-radius: 5px
+        cursor: pointer
+
+        &:hover
+            border-color: $purple
+            background-color: $purple
+            color: $white
+
+#loader_container
+    display: none
+    justify-content: center
+    align-items: center
+    padding: 10px
+    width: 100%
+    margin: 10px 0
+    border: none
+    border-radius: 5px
+    border-color: $purple
+    background-color: $purple
+    color: $white
+    transition: all 150ms
+
+    img
+        animation: rotate 2.4s linear infinite
+
+#send_status
+    position: fixed
+    display: none
+    justify-content: center
+    align-items: center
+    top: 0
+    height: 100vh
+    width: 100%
+    background-color: $onblur_gray
+    z-index: 100000
+    
+#modal_status
+    position: relative
+    width: 50vw
+    min-width: 250px
+    max-width: 680px
+    background-color: $white
+    border-radius: 5px
+    animation: display_modal 200ms backwards
+
+    div
+        display: none
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        height: 100%
+        width: 100%
+        padding: 30px
+        text-align: center
+        animation: display_message 200ms 300ms backwards
+
+        img
+            width: 150px
+            margin-bottom: 20px
+
+        h3
+            margin: 5px 10px
+            font-size: 2em
+
+        p
+            font-size: 1.3em
+
+#close_modal
+    position: absolute
+    top: 0
+    right: 0
+    margin: 10px
+    background: none
+    border: none
+    cursor: pointer
+
+    &:hover
+        opacity: 0.8
+
+    img
+        width: 25px
+
+#contact_external
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    width: 60%
+    max-width: 600px
+    margin: 15px 10px
+
+.external_link
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 5px 10px
+    padding: 20px
+    min-width: 200px
+    border-radius: 5px
+    font-size: 1.2em
+    transition: all 150ms
+
+    img
+        width: 50px
+        margin-right: 15px
+        transition: filter 150ms
+
+    &:hover
+        box-shadow: 0px 0px 5px 1px #1d1d1d38
+        img
+            filter: invert(56%) sepia(93%) saturate(367%) hue-rotate(90deg) brightness(98%) contrast(97%)
+
+    &:nth-child(2):hover > img
+        filter: invert(26%) sepia(56%) saturate(5103%) hue-rotate(209deg) brightness(103%) contrast(109%)
+
 //Dinamic class
 .scrolled
     background-color: $black
@@ -333,6 +502,23 @@ section
         color: $white
         filter: brightness(2)
 
+.invalid_field
+    background-color: $onerror_red !important
+    border-bottom-color: $red !important
+
+.invalid_value
+    align-self: flex-start
+    color: $red
+    font-size: 1em
+    display: none
+
+.visible
+    animation: appear 150ms backwards
+    display: flex !important
+
+.display
+    display: flex !important
+    
 .appear
     animation: appear 150ms ease-out backwards
 
@@ -351,5 +537,20 @@ section
 @keyframes vanish
     100%
         transform: translateY(10px)
+        opacity: 0        
+
+@keyframes rotate
+    100%
+        transform: rotateZ(360deg) 
+
+@keyframes display_modal
+    0%
+        transform: scaleX(0)  
+    100%
+        transform: scaleX(1)
+
+@keyframes display_message
+    0%
         opacity: 0
-                        
+    100%
+        opacity: 1
