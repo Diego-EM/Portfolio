@@ -153,9 +153,9 @@ const projectMessageLink = document.getElementById('project_message_link');
 
 const contactTitle = document.getElementById('contact_title');
 const contactMessage = document.getElementById('contact_message');
-const contactInputN = document.getElementById('contact_inputn');
-const contactInputE = document.getElementById('contact_inpute');
-const contactInputB = document.getElementById('contact_inputb');
+const contactInputN = document.getElementById('from_name');
+const contactInputE = document.getElementById('from_email');
+const contactInputB = document.getElementById('message');
 const contactSubmit = document.getElementById('submit_form');
 const contactMessage2 = document.getElementById('contact_message2');
 const modalSuccessTitle = document.getElementById('modal_success_title');

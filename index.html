@@ -9,6 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("whxFUlQzxNhifSU4U");
+    })();
+    </script>
 </head>
 <body>
     <header id="header">
@@ -222,12 +228,12 @@
             <h2 id="contact_title">Contact me</h2>
             <p id="contact_message">We can build <span>awesome</span> things together!</p>
             <form id="contact_form" novalidate>
-                <input type="text" placeholder="Full name" name="name" id="contact_inputn">
-                <p id="invalid_name" class="invalid_value"></p>
-                <input type="email" placeholder="Email address" name="email" id="contact_inpute">
-                <p id="invalid_email" class="invalid_value"></p>
-                <textarea name="body" placeholder="Let me know your idea..." id="contact_inputb"></textarea>
-                <p id="invalid_body" class="invalid_value"></p>
+                <input type="text" placeholder="Full name" name="from_name" id="from_name">
+                <p id="invalid_from_name" class="invalid_value"></p>
+                <input type="email" placeholder="Email address" name="from_email" id="from_email">
+                <p id="invalid_from_email" class="invalid_value"></p>
+                <textarea name="message" placeholder="Let me know your idea..." id="message"></textarea>
+                <p id="invalid_message" class="invalid_value"></p>
                 <input type="submit" value="Send message" class="visible" id="submit_form">
                 <div id="loader_container">
                     <img src="./assets/misc/loading.svg" alt=":)">

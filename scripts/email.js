@@ -7,30 +7,21 @@ contactForm.addEventListener('submit', function(e){
     const validField = /[^\s].*/i;
     const validEmail = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
 
-    validateField(formContent.name, validField, 'name', PageContent[lang].cerror1)
-        .then(() => validateField(formContent.email, validEmail, 'email', PageContent[lang].cerror2))
-        .then(() => validateField(formContent.body, validField, 'body', PageContent[lang].cerror3))
+    validateField(formContent.from_name, validField, 'from_name', PageContent[lang].cerror1)
+        .then(() => validateField(formContent.from_email, validEmail, 'from_email', PageContent[lang].cerror2))
+        .then(() => validateField(formContent.message, validField, 'message', PageContent[lang].cerror3))
         .then(() => {
             switchLoader();
-            const email = {
-                Host : "host.io",
-                Username : "username",
-                Password : "password",
-                To : 'email@domain.com',
-                From : formContent.email,
-                Subject : "Hey! this is a test",
-                Body : formContent.body
-            }
-            Email.send(email)
-                .then( message =>{
-                    switchLoader();
-                    if (message === "OK"){
-                        displayModal('success');
-                        resetFields();
-                    } else {
-                        displayModal('failed');
-                    }
-                })
+            emailjs.sendForm('service_hkf04m8', 'template_rj4kghh', this)
+            .then(() => {
+                switchLoader();
+                displayModal('success');
+                this.reset();
+            })
+            .catch(() => {
+                switchLoader();
+                displayModal('failed');
+            })
         })
         .catch(e => {
             const invalidMessage = document.getElementById(`invalid_${e.field}`); 
@@ -78,10 +69,4 @@ const displayModal = (status) => {
             modalStatus.classList.remove('display');
         }
     })
-}
-
-const resetFields = () => {
-    document.getElementsByName('name')[0].value = "";
-    document.getElementsByName('email')[0].value = "";
-    document.getElementsByName('body')[0].value = "";
 }
