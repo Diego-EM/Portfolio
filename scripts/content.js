@@ -41,7 +41,9 @@ const PageContent = {
         cm2: "Or connect with me on...",
         modalst: "Email sent successfully",
         modalsm: "You will get a response soon! 💻",
-        modalem: "Sorry, an error has occurred. Please try again."
+        modalem: "Sorry, an error has occurred. Please try again.",
+        foot: "Jr. Web developer",
+        cv: "View CV"
     },
     ES: {
         n1: "Sobre mi",
@@ -85,7 +87,9 @@ const PageContent = {
         cm2: "O chatea conmigo en...",
         modalst: "Mensaje enviado con éxito",
         modalsm: "Muy pronto obtendras mi respuesta! 💻",
-        modalem: "Lo sentimos, un error ha ocurrido. Por favor, vuelva a intentarlo."
+        modalem: "Lo sentimos, un error ha ocurrido. Por favor, vuelva a intentarlo.",
+        foot: "Desarrollador web jr.",
+        cv: "Ver CV"
     }
 }
 
@@ -162,6 +166,9 @@ const modalSuccessTitle = document.getElementById('modal_success_title');
 const modalSuccessMessage = document.getElementById('modal_success_message');
 const modalErrorMessage = document.getElementById('modal_error_message');
 
+const footer_p = document.getElementById('footer_p');
+const footer_cv = document.getElementById('footer_cv');
+
 //Setting content by lang user preference
 const setContent = () => {
     navAbout.textContent = PageContent[lang].n1;
@@ -207,6 +214,9 @@ const setContent = () => {
     modalSuccessTitle.textContent = PageContent[lang].modalst;
     modalSuccessMessage.textContent = PageContent[lang].modalsm;
     modalErrorMessage.textContent = PageContent[lang].modalem;
+
+    footer_p.textContent = PageContent[lang].foot;
+    footer_cv.textContent = PageContent[lang].cv;
 }
 
 //Dinamic welcome message in welcome section
