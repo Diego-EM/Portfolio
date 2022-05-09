@@ -30,6 +30,8 @@ body
     background-image: linear-gradient(to right bottom, #ffffff, #fcfcfc, #f9f9f9, #f7f7f7, #f4f4f4)
 
 main
+    display: flex
+    flex-direction: column
     margin-top: 35px
 
 section
@@ -116,12 +118,15 @@ section
         width: 450px
         margin: 20px
         border-radius: 50%
-        outline: 1px solid $black
+        background-image: url('./assets/misc/profile.jpg')
+        background-size: cover
+        animation: introduce 500ms backwards
 
     #welcome_content
         margin: 20px 0
         width: 50%
         min-width: 250px
+        background-color: $white
 
     h1
         font-size: 3.5em
@@ -153,9 +158,10 @@ section
     justify-content: space-around
     align-items: center
 
-    div
-        display: flex
-        flex-direction: column
+#about_content
+    display: flex
+    flex-direction: column
+    align-items: center
 
     h2
         margin: 10px 15px
@@ -167,17 +173,26 @@ section
         font-size: 1.1em
         text-align: justify
 
+figure
+    height: 500px
+    max-width: 450px
+    min-width: 420px
+    background-color: $gray 
+    background-image: url('./assets/misc/about.jpg')
+    background-size: cover
+
+@media only screen and (max-width: 940px)
     figure
-        height: 500px
-        max-width: 450px
-        min-width: 420px
-        background-color: $gray 
+        display: none
 
-    @media only screen and (max-width: 940px)
-        figure
-            display: none
+#about_anchor
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+    margin: 10px 0
 
-    #about_certification
+    a
         align-self: center
         margin: 5px
         padding: 8px 15px
@@ -192,6 +207,10 @@ section
             background-color: $blue
 
 #skill
+    width: 80%
+    min-width: 350px
+    align-self: center
+
     h2
         margin: 10px 15px
         font-size: 2em
@@ -207,7 +226,7 @@ section
         flex-wrap: wrap
         justify-content: center
         align-items: baseline
-        margin: 30px 20px
+        margin: 30px
 
         li
             display: flex
@@ -629,3 +648,12 @@ footer
         opacity: 0
     100%
         opacity: 1
+
+@keyframes introduce
+    0%
+        opacity: 0.6
+        transform: scale(0.8)
+    100%
+        opacity: 1
+        transform: scale(1)
+        

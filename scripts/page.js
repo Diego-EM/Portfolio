@@ -19,8 +19,7 @@ scroll.reveal('.sr_elem', {
     },
     delay: 200,
     distance: "10px",
-    duration: 350,
-    reset: true
+    duration: 350
 });
 
 scroll.reveal('.sr_project', {
@@ -31,6 +30,5 @@ scroll.reveal('.sr_project', {
     viewFactor: 0.3,
     delay: 150,
     distance: "20px",
-    duration: 200,
-    reset: true
+    duration: 200
 });
