@@ -21,6 +21,8 @@ body {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
   margin-top: 35px;
 }
 
@@ -120,12 +122,15 @@ section:not(#welcome) {
   width: 450px;
   margin: 20px;
   border-radius: 50%;
-  outline: 1px solid #1d1d1d;
+  background-image: url("./assets/misc/profile.jpg");
+  background-size: cover;
+  animation: introduce 500ms backwards;
 }
 #welcome #welcome_content {
   margin: 20px 0;
   width: 50%;
   min-width: 250px;
+  background-color: #f7f7f7;
 }
 #welcome h1 {
   font-size: 3.5em;
@@ -160,32 +165,45 @@ section:not(#welcome) {
   justify-content: space-around;
   align-items: center;
 }
-#about div {
+
+#about_content {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
-#about h2 {
+#about_content h2 {
   margin: 10px 15px;
   font-size: 2em;
   text-align: center;
 }
-#about p {
+#about_content p {
   margin: 15px 40px;
   font-size: 1.1em;
   text-align: justify;
 }
-#about figure {
+
+figure {
   height: 500px;
   max-width: 450px;
   min-width: 420px;
   background-color: #3b3b3b;
+  background-image: url("./assets/misc/about.jpg");
+  background-size: cover;
 }
+
 @media only screen and (max-width: 940px) {
-  #about figure {
+  figure {
     display: none;
   }
 }
-#about #about_certification {
+#about_anchor {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px 0;
+}
+#about_anchor a {
   align-self: center;
   margin: 5px;
   padding: 8px 15px;
@@ -196,10 +214,15 @@ section:not(#welcome) {
   border-radius: 5px;
   transition: background 100ms;
 }
-#about #about_certification:hover {
+#about_anchor a:hover {
   background-color: #2c98c3;
 }
 
+#skill {
+  width: 80%;
+  min-width: 350px;
+  align-self: center;
+}
 #skill h2 {
   margin: 10px 15px;
   font-size: 2em;
@@ -215,7 +238,7 @@ section:not(#welcome) {
   flex-wrap: wrap;
   justify-content: center;
   align-items: baseline;
-  margin: 30px 20px;
+  margin: 30px;
 }
 #skill .skill_list li {
   display: flex;
@@ -667,6 +690,16 @@ footer {
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes introduce {
+  0% {
+    opacity: 0.6;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 

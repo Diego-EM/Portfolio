@@ -12,6 +12,7 @@ const PageContent = {
         a3: "My objective is being part of the sector to contribute to projects that benefit and bring good experiences to the final user, thus bringing a positive impact in a personal and professional way.",
         a4: "I own certifies that avails my tech skills due to my education trough online courses provided by FreeCodeCamp. Feel free to verify their source.",
         a5: "View certifications",
+        a6: "View CV",
         st: "Skills",
         s1: "In my way, I learned multiple technologies and tools that I've implemented in my projects using the MVC architecture pattern and the following technologies.",
         s2: "Also, I've been developing my personal life to bring a positive impact socially and professionally.",
@@ -58,6 +59,7 @@ const PageContent = {
         a3: "Mi objetivo es formar parte del sector de la informática para contribuir a proyectos que beneficien y den una buena experiencia al usuario final, y de tal forma dar un impacto positivo a nivel personal y profesional con las tecnologías del momento.",
         a4: "Cuento con certificados que avalan mis habilidades técnicas gracias al estudio a través de cursos online proveídos por FreeCodeCamp. Siéntete libre de verificar las fuentes.",
         a5: "Ver certificados",
+        a6: "Ver CV",
         st: "Mis habilidades",
         s1: "En el camino he aprendido el uso de múltiples herramientas y las he implementado en mis proyectos utilizando el patrón MVC y las siguientes tecnologías.",
         s2: "De igual manera me he desarrollado en mi vida personal procurando dar un impacto positivo a nivel social y laboral.",
@@ -135,6 +137,7 @@ const aboutP2 = document.getElementById('about_p2');
 const aboutP3 = document.getElementById('about_p3');
 const aboutP4 = document.getElementById('about_p4');
 const aboutCert = document.getElementById('about_certification');
+const aboutCv = document.getElementById('about_cv');
 
 const skillTitle = document.getElementById('skill_title');
 const skillTech = document.getElementById('skill_tech');
@@ -185,6 +188,7 @@ const setContent = () => {
     aboutP3.textContent = PageContent[lang].a3;
     aboutP4.textContent = PageContent[lang].a4;
     aboutCert.textContent = PageContent[lang].a5;
+    aboutCv.textContent = PageContent[lang].a6;
 
     skillTitle.textContent = PageContent[lang].st;
     skillTech.textContent = PageContent[lang].s1
