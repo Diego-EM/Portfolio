@@ -29,6 +29,14 @@ body
     min-height: 100vh
     background-image: linear-gradient(to right bottom, #ffffff, #fcfcfc, #f9f9f9, #f7f7f7, #f4f4f4)
 
+    &::-webkit-scrollbar
+        width: 5px
+        background-color: $light_gray
+
+    &::-webkit-scrollbar-thumb
+        background-color: $black
+        border-radius: 10px
+
 main
     display: flex
     flex-direction: column
@@ -49,6 +57,7 @@ section
     position: fixed
     top: 0
     display: flex
+    align-items: center
     justify-content: space-between
     padding: 7px 35px
     width: 100%
@@ -57,7 +66,10 @@ section
 
     @media only screen and ( max-width: 600px)
         padding: 7px 17px
-        
+
+#header_logo img
+    width: 50px
+
 #header_nav
     display: flex
     justify-content: space-evenly
@@ -126,7 +138,6 @@ section
         margin: 20px 0
         width: 50%
         min-width: 250px
-        background-color: $white
 
     h1
         font-size: 3.5em
@@ -139,6 +150,7 @@ section
             position: absolute
             top: 65%
             width: 70%
+            background-color: #fafafa
         
         h1, h2
             text-align: center
@@ -146,12 +158,21 @@ section
     @media only screen and ( max-width: 745px )
         #welcome_content
             position: relative
+            background-color: initial
 
         #welcome_photo
             display: none
     
     #welcome_message
         transition: color 500ms
+
+#scroll_anchor
+    position: absolute
+    bottom: 0
+    animation: flotation 2s ease-in-out infinite alternate
+
+    img
+        width: 50px
 
 #about
     display: flex
@@ -587,7 +608,10 @@ footer
         border-color: $white !important
         color: white !important
 
-    #header_logo, a
+    #header_logo
+        filter: invert(97%) sepia(5%) saturate(83%) hue-rotate(118deg) brightness(118%) contrast(94%)
+        
+    a
         color: $white
         filter: brightness(2)
 
@@ -651,9 +675,15 @@ footer
 
 @keyframes introduce
     0%
-        opacity: 0.6
-        transform: scale(0.8)
+        opacity: 0.7
+        transform: scale(0.9)
     100%
         opacity: 1
         transform: scale(1)
+    
+@keyframes flotation
+    0%
+        transform: translateY(0px)
+    100%
+        transform: translateY(5px)
         
