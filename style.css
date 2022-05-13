@@ -65,8 +65,11 @@ section:not(#welcome) {
   }
 }
 
+#header_logo {
+  display: flex;
+}
 #header_logo img {
-  width: 50px;
+  width: 37px;
 }
 
 #header_nav {
@@ -153,8 +156,9 @@ section:not(#welcome) {
 @media only screen and (max-width: 979px) {
   #welcome #welcome_content {
     position: absolute;
-    top: 65%;
+    top: 55%;
     width: 70%;
+    min-height: 200px;
     background-color: #fafafa;
   }
   #welcome h1, #welcome h2 {
