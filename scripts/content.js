@@ -7,7 +7,7 @@ const PageContent = {
         w1: "Hi! I'm Diego Muñoz",
         w2: "I'm a Jr. web developer",
         at: "About me",
-        a1: "I'm a computer technician, and I'm currently studying at Universidad Veracruzana. I'm a self-taught person, passionate about frontend and backend web development.",
+        a1: "I'm a computer technician, and I'm currently studying at UNADM. I'm a self-taught person, passionate on frontend and backend web development.",
         a2: "I'm starting my professional career developing projects where I can use what I learned, improve development techniques and bring a great user experience implementing the tools and technologies, whatever the case may be.",
         a3: "My objective is being part of the sector to contribute to projects that benefit and bring good experiences to the final user, thus bringing a positive impact in a personal and professional way.",
         a4: "I own certifies that avails my tech skills due to my education trough online courses provided by FreeCodeCamp. Feel free to verify their source.",
@@ -54,7 +54,7 @@ const PageContent = {
         w1: "Hey! Soy Diego Muñoz",
         w2: "Soy un desarrollador web jr.",
         at: "Sobre mi",
-        a1: "Soy técnico bachiller en computación y actualmente me encuentro estudiando en la Universidad Veracruzana. Soy una persona autodidacta, apasionado por el desarrollo web, tanto del lado cliente como del servidor.",
+        a1: "Soy técnico bachiller en computación y actualmente me encuentro estudiando en la UNADM. Soy una persona autodidacta, apasionado por el desarrollo web, tanto del lado cliente como del servidor.",
         a2: "Estoy trazando mi camino profesional a partir de proyectos en los cuales me permitan hacer uso de todo lo que he aprendido con el tiempo, perfeccionar técnicas de desarrollo y brindar una experiencia de usuario agradable implementando las herramientas y tecnologías según sus necesidades.",
         a3: "Mi objetivo es formar parte del sector de la informática para contribuir a proyectos que beneficien y den una buena experiencia al usuario final, y de tal forma dar un impacto positivo a nivel personal y profesional con las tecnologías del momento.",
         a4: "Cuento con certificados que avalan mis habilidades técnicas gracias al estudio a través de cursos online proveídos por FreeCodeCamp. Siéntete libre de verificar las fuentes.",
@@ -99,14 +99,12 @@ const DinamicContent = {
     EN: [
         "I create solutions and resolve needs",
         "I'm a passionate web developer",
-        "I make awesome experiences",
-        "I love coding and coffee"
+        "I make awesome experiences"
     ],
     ES: [
         "Creo soluciones y resuelvo necesidades",
         "Soy un desarrollador web apasionado",
-        "Creo experiencias asombrosas",
-        "Amo la programación y el café"
+        "Creo experiencias asombrosas"
     ]
 }
 

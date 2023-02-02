@@ -204,18 +204,11 @@ section:not(#welcome) {
   text-align: center;
 }
 #about_content p {
+  width: 80%;
+  min-width: 150px;
   margin: 15px 40px;
   font-size: 1.1em;
   text-align: justify;
-}
-
-figure {
-  height: 500px;
-  max-width: 450px;
-  min-width: 420px;
-  background-color: #3b3b3b;
-  background-image: url("./assets/misc/about.jpg");
-  background-size: cover;
 }
 
 @media only screen and (max-width: 940px) {
@@ -324,7 +317,7 @@ figure {
 #project #project_content .project_card:hover .project_preview img {
   filter: grayscale(0);
 }
-@media only screen and (max-width: 1163px) {
+@media only screen and (max-width: 1167px) {
   #project #project_content .project_card {
     width: 474px;
   }
